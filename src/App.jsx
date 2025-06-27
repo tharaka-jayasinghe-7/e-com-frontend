@@ -1,9 +1,9 @@
-import "./App.css";
+import { Home } from "./pages";
 
 function App() {
   return (
     <>
-      <p className="text-3xl font-bold text-blue-600">Hello Tailwind + Vite!</p>
+      <Home />
     </>
   );
 }
