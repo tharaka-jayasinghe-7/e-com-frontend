@@ -34,12 +34,12 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
       {/* Top Bar */}
-      <div className="bg-sky-800 text-white text-sm">
+      <div className="bg-teal-700 text-white text-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-2">
             <div className="flex items-center space-x-4">
-              <span>📞 +1 (555) 123-4567</span>
-              <span>✉️ support@eshop.com</span>
+              <span>📞 +94 112 700 123</span>
+              <span>✉️ support@vibex.com</span>
             </div>
             <span>Lets get an Internship!!</span>
             <div className="flex items-center space-x-4">
@@ -55,9 +55,9 @@ const Header = () => {
           <div className="flex items-center">
             <Link
               to="/"
-              className="text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors"
+              className="text-2xl font-bold text-teal-600 hover:text-teal-700 transition-colors"
             >
-              e-shop
+              Vibe-X
             </Link>
           </div>
 
@@ -93,14 +93,14 @@ const Header = () => {
               {isAccountDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
                   <div className="py-2">
-                    <button className="w-full text-left px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+                    <button className="w-full text-left px-4 py-2 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors">
                       View Profile
                     </button>
-                    <button className="w-full text-left px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+                    <button className="w-full text-left px-4 py-2 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors">
                       Profile Settings
                     </button>
                     <hr className="my-2 border-gray-200" />
-                    <button className="w-full text-left px-4 py-2 text-red-600 hover:bg-red-50 transition-colors">
+                    <button className="w-full text-left px-4 py-2 text-red-600 hover:bg-red-500 hover:text-white transition-colors">
                       Logout
                     </button>
                   </div>
@@ -133,7 +133,7 @@ const Header = () => {
             {navigation.map((item) => (
               <span
                 key={item.name}
-                className="text-gray-700 hover:text-primary-600 cursor-pointer font-medium transition-colors"
+                className="text-gray-700 hover:text-teal-600 cursor-pointer font-medium transition-colors"
               >
                 {item.name}
               </span>
