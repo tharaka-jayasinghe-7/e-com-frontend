@@ -69,7 +69,7 @@ const ProductCard = ({ product }) => {
         </div>
 
         <div className="flex items-center space-x-2 mb-3">
-          <span className="text-lg font-bold text-primary-600">
+          <span className="text-lg font-bold text-teal-600">
             ${product.price.toFixed(2)}
           </span>
           {product.originalPrice && (

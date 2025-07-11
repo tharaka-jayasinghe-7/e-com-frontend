@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ProductCard from "../ui/ProductCard";
 import { featuredProducts } from "../../data/products";
 
 const FeaturedProducts = () => {
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 4;
   const maxIndex = Math.max(0, featuredProducts.length - itemsPerPage);
@@ -67,7 +69,10 @@ const FeaturedProducts = () => {
         </div>
 
         <div className="text-center mt-8">
-          <button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+          <button
+            onClick={() => navigate("/all-products")}
+            className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
             View All Products
           </button>
         </div>
