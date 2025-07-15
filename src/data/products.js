@@ -11,6 +11,14 @@ export const products = [
     reviews: 128,
     isNew: false,
     sale: true,
+    description:
+      "Experience the future of mobile technology with the iPhone 14 Plus. Featuring an advanced camera system, powerful A15 Bionic chip, and stunning Super Retina XDR display. Capture life's moments with professional-quality photos and videos.",
+    features: [
+      "6.7-inch Super Retina XDR display with True Tone",
+      "Advanced dual-camera system with 48MP Main camera",
+      "A15 Bionic chip with 5-core GPU for lightning-fast performance",
+      "All-day battery life with wireless and MagSafe charging",
+    ],
   },
   {
     id: 2,
@@ -24,6 +32,14 @@ export const products = [
     reviews: 87,
     isNew: true,
     sale: true,
+    description:
+      "Built for athletes and active individuals, the JBL Endurance wireless headphones deliver powerful sound that won't quit. Sweat-proof design and secure fit make them perfect for workouts, running, and all-day listening.",
+    features: [
+      "Up to 8 hours of wireless playback time",
+      "Sweat-proof and waterproof IPX7 rating",
+      "FlexSoft ear tips for comfortable secure fit",
+      "Touch controls for music and calls",
+    ],
   },
   {
     id: 3,
@@ -37,6 +53,14 @@ export const products = [
     reviews: 234,
     isNew: true,
     sale: false,
+    description:
+      "Transform your living room into a home theater with this LG Smart TV. Featuring stunning 4K resolution, HDR technology, and smart connectivity, enjoy your favorite shows, movies, and streaming services in brilliant detail.",
+    features: [
+      "55-inch 4K Ultra HD LED display with HDR10",
+      "WebOS smart platform with built-in Wi-Fi",
+      "Multiple HDMI and USB ports for connectivity",
+      "AI-powered processor for enhanced picture quality",
+    ],
   },
   {
     id: 4,
@@ -50,6 +74,14 @@ export const products = [
     reviews: 45,
     isNew: true,
     sale: false,
+    description:
+      "Capture memories instantly with this vintage-inspired instant camera. Perfect for parties, travel, and special occasions. Create physical photos you can hold, share, and display immediately.",
+    features: [
+      "Instant photo printing in retro polaroid style",
+      "Built-in flash for low-light photography",
+      "Compact and portable design for easy carrying",
+      "Auto-focus system for sharp, clear images",
+    ],
   },
   {
     id: 5,
@@ -63,6 +95,14 @@ export const products = [
     reviews: 156,
     isNew: false,
     sale: false,
+    description:
+      "Experience cinema-quality entertainment at home with this premium 75-inch 4K Smart TV. Advanced display technology and smart features bring your favorite content to life with incredible detail and vibrant colors.",
+    features: [
+      "75-inch 4K Ultra HD display with Quantum Dot technology",
+      "Dolby Vision and Atmos for immersive audio-visual experience",
+      "Voice control compatible with Alexa and Google Assistant",
+      "120Hz refresh rate for smooth gaming and sports",
+    ],
   },
   {
     id: 6,
@@ -76,6 +116,14 @@ export const products = [
     reviews: 342,
     isNew: false,
     sale: true,
+    description:
+      "Enter the next generation of gaming with PlayStation 5. Experience lightning-fast loading, stunning graphics, and immersive haptic feedback that brings games to life like never before.",
+    features: [
+      "Custom SSD for ultra-fast loading and seamless gameplay",
+      "Ray tracing technology for realistic lighting and reflections",
+      "DualSense wireless controller with haptic feedback",
+      "4K gaming support with up to 120fps frame rates",
+    ],
   },
   {
     id: 7,
@@ -89,6 +137,14 @@ export const products = [
     reviews: 89,
     isNew: true,
     sale: false,
+    description:
+      "Unleash your creativity and productivity with the MacBook Pro 16-inch. Powered by the revolutionary M2 chip, featuring a stunning Liquid Retina XDR display, and all-day battery life for professionals who demand the best.",
+    features: [
+      "M2 Pro chip with 12-core CPU and 19-core GPU",
+      "16-inch Liquid Retina XDR display with 1000 nits brightness",
+      "Up to 22 hours of battery life",
+      "16GB unified memory with 512GB SSD storage",
+    ],
   },
   {
     id: 8,
@@ -102,6 +158,14 @@ export const products = [
     reviews: 67,
     isNew: false,
     sale: true,
+    description:
+      "Elevate your gaming performance with this precision wireless gaming mouse. Featuring high-DPI sensor, customizable RGB lighting, and ergonomic design for extended gaming sessions and competitive play.",
+    features: [
+      "16,000 DPI sensor for precise tracking and movement",
+      "Customizable RGB lighting with multiple effects",
+      "Wireless connectivity with low-latency 2.4GHz technology",
+      "Ergonomic design with programmable buttons",
+    ],
   },
 ];
 

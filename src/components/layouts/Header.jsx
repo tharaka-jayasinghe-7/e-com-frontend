@@ -97,7 +97,7 @@ const Header = () => {
                       View Profile
                     </button>
                     <button className="w-full text-left px-4 py-2 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors">
-                      Profile Settings
+                      My Orders
                     </button>
                     <hr className="my-2 border-gray-200" />
                     <button className="w-full text-left px-4 py-2 text-red-600 hover:bg-red-500 hover:text-white transition-colors">
