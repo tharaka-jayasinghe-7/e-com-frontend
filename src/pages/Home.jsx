@@ -10,7 +10,6 @@ import Footer from "../components/main_layouts/Footer";
 function Home() {
   return (
     <main>
-      <Header />
       <HeroSection />
       <CategoriesSection />
       <FeaturedProducts />

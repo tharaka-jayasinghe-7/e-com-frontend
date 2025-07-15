@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { Search, ShoppingCart, User, Menu, X, ChevronDown } from "lucide-react";
+import { Search, User, Menu, X, ChevronDown } from "lucide-react";
+import Cart from "../Cart";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,7 +49,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
       {/* Main Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -108,10 +108,7 @@ const Header = () => {
               )}
             </div>
 
-            <button className="relative flex items-center space-x-1 text-gray-700 hover:text-primary-600">
-              <ShoppingCart className="h-5 w-5" />
-              <span className="hidden md:block">Cart</span>
-            </button>
+            <Cart />
 
             {/* Mobile menu button */}
             <button
@@ -152,8 +149,7 @@ const Header = () => {
             <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
           </div>
         </div>
-      </div>
-
+      </div>{" "}
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">

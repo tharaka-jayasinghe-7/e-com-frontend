@@ -1,11 +1,17 @@
 import { Star, ShoppingCart } from "lucide-react";
 import { useState } from "react";
+import { useCart } from "../../CartContext";
 
 const ProductCard = ({ product }) => {
   const [imageError, setImageError] = useState(false);
 
+  // Get the addToCart function from our cart
+  const { addToCart } = useCart();
+
   const handleAddToCart = () => {
-    console.log("Add to cart clicked for:", product.name);
+    // Call the addToCart function with the product
+    addToCart(product);
+    alert(`${product.name} added to cart!`); // feedback
   };
 
   const handleImageError = () => {

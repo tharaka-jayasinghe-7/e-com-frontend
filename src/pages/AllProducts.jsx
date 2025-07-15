@@ -7,8 +7,8 @@ const AllProducts = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("featured");
-  const [viewMode, setViewMode] = useState("grid");
   const [showFilters, setShowFilters] = useState(false);
+  const viewMode = "grid";
 
   // Get unique categories
   const categories = [
@@ -154,32 +154,6 @@ const AllProducts = () => {
                     Showing {filteredProducts.length} of {products.length}{" "}
                     products
                   </span>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <span className="text-sm text-gray-600 hidden sm:block">
-                    View:
-                  </span>
-                  <button
-                    onClick={() => setViewMode("grid")}
-                    className={`p-2 rounded-lg ${
-                      viewMode === "grid"
-                        ? "bg-teal-100 text-teal-600"
-                        : "text-gray-400 hover:text-gray-600"
-                    }`}
-                  >
-                    <Grid className="h-4 w-4" />
-                  </button>
-                  <button
-                    onClick={() => setViewMode("list")}
-                    className={`p-2 rounded-lg ${
-                      viewMode === "list"
-                        ? "bg-teal-100 text-teal-600"
-                        : "text-gray-400 hover:text-gray-600"
-                    }`}
-                  >
-                    <List className="h-4 w-4" />
-                  </button>
                 </div>
               </div>
             </div>
