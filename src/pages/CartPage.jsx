@@ -1,5 +1,6 @@
 import { useCart } from "../contexts/CartContext";
 import { Plus, Minus, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CartPage = () => {
   const {
@@ -85,9 +86,12 @@ const CartPage = () => {
                 <div className="text-2xl font-bold text-teal-600">
                   Total: ${getTotalPrice().toFixed(2)}
                 </div>
-                <button className="mt-4 bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg text-lg">
+                <Link
+                  to="/checkout"
+                  className="inline-block mt-4 bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg text-lg font-medium transition-colors"
+                >
                   Proceed to Checkout
-                </button>
+                </Link>
               </div>
             </div>
           </div>
