@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ShoppingCart, X, Plus, Minus } from "lucide-react";
-import { useCart } from "../CartContext";
+import { useCart } from "../../contexts/CartContext";
 
 const Cart = () => {
   const {

@@ -1,4 +1,4 @@
-import { useCart } from "../CartContext";
+import { useCart } from "../contexts/CartContext";
 import { Plus, Minus, X } from "lucide-react";
 
 const CartPage = () => {

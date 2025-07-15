@@ -1,17 +1,18 @@
 import { Star, ShoppingCart } from "lucide-react";
 import { useState } from "react";
-import { useCart } from "../../CartContext";
+import { useCart } from "../../contexts/CartContext";
+import { useToast } from "../../contexts/ToastContext";
 
 const ProductCard = ({ product }) => {
   const [imageError, setImageError] = useState(false);
 
-  // Get the addToCart function from our cart
   const { addToCart } = useCart();
+  const { showToast } = useToast();
 
   const handleAddToCart = () => {
-    // Call the addToCart function with the product
     addToCart(product);
-    alert(`${product.name} added to cart!`); // feedback
+    console.log("Button clicked, showing toast for:", product.name);
+    showToast(`${product.name} added to cart!`);
   };
 
   const handleImageError = () => {

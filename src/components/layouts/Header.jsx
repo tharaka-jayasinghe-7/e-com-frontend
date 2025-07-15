@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Search, User, Menu, X, ChevronDown } from "lucide-react";
-import Cart from "../Cart";
+import Cart from "../ui/Cart";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
