@@ -1,14 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Search, Filter, Grid, List, ChevronDown } from "lucide-react";
 import ProductCard from "../components/ui/ProductCard";
 import { products } from "../data/products";
 
 const AllProducts = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("featured");
   const [showFilters, setShowFilters] = useState(false);
   const viewMode = "grid";
+
+  // Effect to handle URL parameters
+  useEffect(() => {
+    const categoryParam = searchParams.get("category");
+    if (categoryParam) {
+      // Capitalize first letter to match category format
+      const formattedCategory = categoryParam.charAt(0).toUpperCase() + categoryParam.slice(1);
+      setSelectedCategory(formattedCategory);
+    } else {
+      // If no category parameter, show all products
+      setSelectedCategory("All");
+    }
+  }, [searchParams]);
 
   // Get unique categories
   const categories = [

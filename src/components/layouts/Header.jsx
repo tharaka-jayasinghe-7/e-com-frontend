@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Search, User, Menu, X, ChevronDown } from "lucide-react";
 import Cart from "../ui/Cart";
+import { categories } from "../../data/products";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,12 +25,13 @@ const Header = () => {
     };
   }, []);
 
+  // Create navigation array with All and product categories
   const navigation = [
-    { name: "Home", href: "#" },
-    { name: "Categories", href: "#" },
-    { name: "Products", href: "#" },
-    { name: "About", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "All", href: "/all-products" },
+    ...categories.map(category => ({
+      name: category.name,
+      href: `/all-products?category=${category.name.toLowerCase()}`
+    }))
   ];
 
   return (
@@ -96,9 +98,13 @@ const Header = () => {
                     <button className="w-full text-left px-4 py-2 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors">
                       View Profile
                     </button>
-                    <button className="w-full text-left px-4 py-2 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors">
+                    <Link 
+                      to="/my-orders"
+                      className="w-full text-left px-4 py-2 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors block"
+                      onClick={() => setIsAccountDropdownOpen(false)}
+                    >
                       My Orders
-                    </button>
+                    </Link>
                     <hr className="my-2 border-gray-200" />
                     <button className="w-full text-left px-4 py-2 text-red-600 hover:bg-red-500 hover:text-white transition-colors">
                       Logout
@@ -128,12 +134,13 @@ const Header = () => {
         <nav className="hidden md:block border-t border-gray-200">
           <div className="flex space-x-8 py-4">
             {navigation.map((item) => (
-              <span
+              <Link
                 key={item.name}
-                className="text-gray-700 hover:text-teal-600 cursor-pointer font-medium transition-colors"
+                to={item.href}
+                className="text-gray-700 hover:text-teal-600 font-medium transition-colors"
               >
                 {item.name}
-              </span>
+              </Link>
             ))}
           </div>
         </nav>
@@ -155,16 +162,22 @@ const Header = () => {
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-2 space-y-2">
             {navigation.map((item) => (
-              <span
+              <Link
                 key={item.name}
-                className="block py-2 text-gray-700 hover:text-primary-600 font-medium"
+                to={item.href}
+                className="block py-2 text-gray-700 hover:text-teal-600 font-medium"
+                onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
-              </span>
+              </Link>
             ))}
-            <span className="block py-2 text-gray-700 hover:text-primary-600 font-medium">
-              Account
-            </span>
+            <Link
+              to="/my-orders"
+              className="block py-2 text-gray-700 hover:text-teal-600 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              My Orders
+            </Link>
           </div>
         </div>
       )}
