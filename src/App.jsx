@@ -5,10 +5,12 @@ import CheckoutPage from "./pages/CheckoutPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import Header from "./components/layouts/Header";
 import Footer from "./components/layouts/Footer";
+import ScrollToTop from "./components/utils/ScrollToTop";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
